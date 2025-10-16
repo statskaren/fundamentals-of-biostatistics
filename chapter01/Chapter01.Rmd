@@ -5,7 +5,7 @@ email: "kare.kgomes@usp.br"
 date: "`r Sys.Date()`"
 output:
   odt_document:
-    reference_odt: "template.odt"
+    reference_odt: "../template.odt"
 ---
 
 # 1. Introduction
@@ -13,7 +13,7 @@ This document reproduces examples and exercises from **Chapter 1** of *Fundament
 The goal is to practice descriptive statistics concepts using **R**.
 
 ---
-  
+ 
 # 2. General overview
 This chapter covers the following topics: the general overview about statistics, some types of data, 
 frequency distributions, measures of central tendency (such as mean), measures of variability (such as standard deviation) and graphical representations (like histograms).
