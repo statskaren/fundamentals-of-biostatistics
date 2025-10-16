@@ -34,7 +34,7 @@ Each chapter of the book has its own folder with R Markdown files and outputs:
 │   ├── 📄 chapter02.Rmd
 │   └── ...
 └── 📄 render_all.R # Script to render all chapters at once
-```bash 
+``` 
 ---
   
 Now, we're gonna see how to reproduce, step by step
