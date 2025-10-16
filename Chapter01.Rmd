@@ -1,0 +1,21 @@
+---
+title: "Chapter 1 - General Overview"
+author: "Karen Gomes"
+email: "kare.kgomes@usp.br"
+date: "`r Sys.Date()`"
+output:
+  odt_document:
+    reference_odt: "template.odt"
+---
+
+# 1. Introduction
+This document reproduces examples and exercises from **Chapter 1** of *Fundamentals of Biostatistics* (Bernard Rosner).  
+The goal is to practice descriptive statistics concepts using **R**.
+
+---
+  
+# 2. General overview
+This chapter covers the following topics: the general overview about statistics, some types of data, 
+frequency distributions, measures of central tendency (such as mean), measures of variability (such as standard deviation) and graphical representations (like histograms).
+We are going to to use the example datasets provided in the book to illustrate these concepts
+In addition, we will explore some datasets from the **R** environment to further understand these concepts.

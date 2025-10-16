@@ -1,0 +1,44 @@
+---
+  title: "Chapter 1 - General Overview"
+  author: "Karen Gomes"
+  email: "kare.kgomes@usp.br"
+  date: "`r Sys.Date()`"
+  output:
+    odt_document:
+    reference_odt: "template.odt"
+---
+    
+# 2. Introduction 
+In this section, we will reproduce some examples and exercises, focused on descriptive statistics
+concepts using **R**.
+
+---
+
+# 2.1 Example 1 - Cancer and Nutrition
+We don't have the dataset used in the book, but we can create a similar one to illustrate the concepts.
+So, let's imagine that some some studies have suggested that consumption of vitamin A may prevents cancer.
+To overview this situation, we can imagine that a questionnaire was used to collect data on vitamin-A consumption among patients with cancer (cases) and controls.
+How could we represent this data graphically? So Let'do this. 
+
+#load the necessary packages
+library(ggplot2)
+library(gridExtra)
+
+#create a dataframe with the data based on the image
+data <- data.frame(
+  Group = rep(c("Cases", "Controls"), each = 4),
+  Consumption = rep(c("≤ ½ RDA*", "> ½, ≤ 1", "> 1, ≤ 2", "> 2, ≤ 5"), 2), 
+  Percentage = c(10, 50, 30, 10, 40, 40, 15, 5) #percentage values from the graph
+)
+
+#histogram of the cases
+cases <- ggplot(data[data$Group == "Cases", ], 
+                aes(x = Consumption, y = Percentage)) +
+  geom_bar(stat = "identity", fill = "#d8d9da",color = "black", size = 0.2, width = 0.6) +
+  labs(title = "Percentage of cases",
+       y = "", x = "") +
+  scale_y_continuous(limits = c(0, 50), breaks = seq(0, 50, by = 10)) +
+  theme(plot.title = element_text(hjust = 0.5, size = 10),
+        axis.text = element_text(size = 8),
+        panel.grid.major.x = element_blank()) + 
+  theme_minimal()
